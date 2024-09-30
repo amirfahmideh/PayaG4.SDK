@@ -3,6 +3,7 @@
 	<Authors>Amir Fahmideh</Authors>
 	<Description>.net standard library to communicate with Pouya services</Description>
 	<PackageTags>Pouya Service</PackageTags>
+	<PackageProjectUrl>https://github.com/amirfahmideh/PayaG4.SDK</PackageProjectUrl>
 	<EnablePackageValidation>true</EnablePackageValidation>
 	<TargetFramework>netstandard2.1</TargetFramework>
     <TargetFramework>net8.0</TargetFramework>
@@ -12,6 +13,16 @@
 	<PropertyGroup>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
+	  	<PropertyGroup>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
+  	<ItemGroup>
+		<!-- Add a README.md next to the csproj -->
+		<None Include="README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
