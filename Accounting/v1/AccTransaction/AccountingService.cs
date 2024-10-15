@@ -6,11 +6,11 @@ using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.Exceptions;
 
 namespace PayaG4.SDK.Accounting.V1.AccTransaction;
-public class GeneralAccountingService : BaseService
+public class AccountingService : BaseService
 {
     private HttpClient httpClient;
     private readonly string apiPrefix = "/api/v1/accTransaction/";
-    public GeneralAccountingService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
+    public AccountingService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
     {
         httpClient = new HttpClient();
     }
@@ -19,6 +19,7 @@ public class GeneralAccountingService : BaseService
         try
         {
             httpClient = new HttpClient();
+            await AddAuthorizationBearerAsync(httpClient);
             var clientUrl = GenerateApiCallUrl(apiPrefix, "addAccTransaction");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)
