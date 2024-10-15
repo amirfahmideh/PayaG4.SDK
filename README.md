@@ -1,3 +1,4 @@
-# PataG4.SDK
+# PayaG4.SDK
 
-SDK to communicate too Pouya web service for developers
+SDK for communicate to Pouya(ERP), Web service for developers
+Let's Code!

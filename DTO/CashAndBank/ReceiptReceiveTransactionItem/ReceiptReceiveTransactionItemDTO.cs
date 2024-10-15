@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using PersianUtilCore.Extension;
 
-namespace PayaG4.SDK.DTO.TrsTransaction
+namespace PayaG4.SDK.DTO.CashAndBank
 {
     public class ReceiptReceiveTransactionItemDTO
     {

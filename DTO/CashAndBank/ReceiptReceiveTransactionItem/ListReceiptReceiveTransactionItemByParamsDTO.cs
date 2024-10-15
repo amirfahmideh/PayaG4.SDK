@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 
-namespace PayaG4.SDK.DTO.TrsTransaction
+namespace PayaG4.SDK.DTO.CashAndBank
 {
-    public class ListReceiptReceiveTransactionItemByParamsDTO 
+    public class ListReceiptReceiveTransactionItemByParamsDTO
     {
 
-        [Display(Name = "تاریخ و زمان وصول")]
-        [Required(ErrorMessage = "تاریخ و زمان وصول را وارد کنید")]
-        public DateTime ReceiptDateTime { get; set; }
+        [Display(Name = "تاریخ و زمان وصول از")]
+        [Required(ErrorMessage = "تاریخ و زمان وصول از را وارد کنید")]
+        public DateTime ReceiptDateTimeFrom { get; set; }
+
+        [Display(Name = "تاریخ و زمان وصول تا")]
+        [Required(ErrorMessage = "تاریخ و زمان وصول تا را وارد کنید")]
+        public DateTime ReceiptDateTimeTo { get; set; }
 
         [Display(Name = "مبلغ")]
         [Required(ErrorMessage = "مبلغ را وارد کنید")]

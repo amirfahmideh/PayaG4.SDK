@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace PayaG4.SDK.DTO.TrsTransaction
+namespace PayaG4.SDK.DTO.CashAndBank
 {
     public class ReceiptReceiveTransactionItemDetailDTO
     {

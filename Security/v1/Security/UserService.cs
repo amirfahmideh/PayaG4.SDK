@@ -4,29 +4,30 @@ using PayaG4.SDK.Base;
 using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.DTO.CashAndBank;
 using PayaG4.SDK.Exceptions;
+using PayaG4.SDK.DTO.Security;
 
-namespace PayaG4.SDK.CashAndBank.V1.TrsTransaction;
-public class GeneralTrsTransactionService : BaseService
+namespace PayaG4.SDK.Security.V1.Security;
+public class UserService : BaseService
 {
     private HttpClient httpClient;
-    private readonly string apiPrefix = "/api/v1/trsTransaction/";
-    public GeneralTrsTransactionService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
+    private readonly string apiPrefix = "/api/v1/security/";
+    public UserService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
     {
         httpClient = new HttpClient();
     }
-    public async Task<MethodResult<ReceiptReceiveTransactionItemDTO>> GetReceiptReceiveItemByParamsAsync(ListReceiptReceiveTransactionItemByParamsDTO parameter)
+    public async Task<MethodResult<AuthResponse>> LoginAsync(LoginUserDTO parameter)
     {
         try
         {
             httpClient = new HttpClient();
-            var clientUrl = GenerateApiCallUrl(apiPrefix, "getReceiptReceiveItemByParams");
+            var clientUrl = GenerateApiCallUrl(apiPrefix, "login");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)
             {
-                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<ReceiptReceiveTransactionItemDTO>>();
+                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<AuthResponse>>();
                 if (responseResult != null)
                     return responseResult;
-                else { return MethodResult<ReceiptReceiveTransactionItemDTO>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
+                else { return MethodResult<AuthResponse>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
             }
             else if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
@@ -40,7 +41,7 @@ public class GeneralTrsTransactionService : BaseService
         }
         catch (Exception ex)
         {
-            return MethodResult<ReceiptReceiveTransactionItemDTO>.CloneSimpleErrorMethodResult("خطا", ex.Message);
+            return MethodResult<AuthResponse>.CloneSimpleErrorMethodResult("خطا", ex.Message);
         }
     }
 }
