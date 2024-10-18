@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 
 namespace PayaG4.SDK.DTO.AccTransaction;
-public class AccTransactionItemsDTO
+public class AccTransactionItemDTO
 {
 
     [Display(Name = "حساب کل")]

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 namespace PayaG4.SDK.DTO.AccTransaction;
 public class AddAccTransactionDTO
 {
-    public List<AccTransactionItemsDTO> AccTransactionItems { get; set; }
+    public List<AccTransactionItemDTO> AccTransactionItems { get; set; }
     public int DocumentCategoryCode { get; set; }
     public DateTime AccDate { get; set; }
 }
