@@ -37,7 +37,7 @@ public class UserService : BaseService
             {
                 throw new BadRequestException();
             }
-            else throw new Exception("UnHandle Exception");
+            else throw new Exception(response.ReasonPhrase);
         }
         catch (Exception ex)
         {

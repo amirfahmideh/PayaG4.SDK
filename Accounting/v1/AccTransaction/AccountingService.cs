@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http.Json;
 using PayaG4.SDK.Base;
@@ -37,7 +38,10 @@ public class AccountingService : BaseService
             {
                 throw new BadRequestException();
             }
-            else throw new Exception("UnHandle Exception");
+            else
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
         }
         catch (Exception ex)
         {
