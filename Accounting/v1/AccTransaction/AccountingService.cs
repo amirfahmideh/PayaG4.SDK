@@ -14,13 +14,13 @@ public class AccountingService : BaseService
     {
         httpClient = new HttpClient();
     }
-    public async Task<MethodResult<int>> AddAccTransactionAsync(AddAccTransactionDTO parameter)
+    public async Task<MethodResult<int>> AddAccTransactionAsync(AddAccTransactionBatchDTO parameter)
     {
         try
         {
             httpClient = new HttpClient();
             await AddAuthorizationBearerAsync(httpClient);
-            var clientUrl = GenerateApiCallUrl(apiPrefix, "addAccTransaction");
+            var clientUrl = GenerateApiCallUrl(apiPrefix, "addAccTransactionBatch");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)
             {
