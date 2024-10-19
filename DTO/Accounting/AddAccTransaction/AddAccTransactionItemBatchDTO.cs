@@ -1,13 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
-
 namespace PayaG4.SDK.DTO.AccTransaction;
-<<<<<<<< HEAD:DTO/Accounting/AddAccTransaction/AddAccTransactionItemBatchDTO.cs
 public class AddAccTransactionItemBatchDTO
-========
-public class AccTransactionItemDTO
->>>>>>>> ce60614baa6b26fc036d80a3c8e6952b5fb51a6c:DTO/Accounting/AddAccTransaction/AccTransactionItemDTO.cs
 {
 
     [Display(Name = "حساب کل")]
