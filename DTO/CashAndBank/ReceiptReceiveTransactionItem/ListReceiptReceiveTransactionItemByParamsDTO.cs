@@ -30,5 +30,7 @@ namespace PayaG4.SDK.DTO.CashAndBank
         [Display(Name = "سال مالی")]
         public int? FYearId { get; set; }
 
+        [Display(Name = "کنترل بخش انتهایی شماره سند")]
+        public int? CompareSuffixDocNoNumber { get; set; }
     }
 }
