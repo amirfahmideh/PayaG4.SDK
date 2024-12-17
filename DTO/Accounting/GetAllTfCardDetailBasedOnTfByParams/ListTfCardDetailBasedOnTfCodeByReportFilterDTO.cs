@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using PayaG4.DataLayer.Enums.Common;
 using PayaG4.SDK.DTO.General;
 
 

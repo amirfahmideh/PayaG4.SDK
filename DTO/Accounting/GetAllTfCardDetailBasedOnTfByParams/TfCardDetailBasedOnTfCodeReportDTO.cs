@@ -1,7 +1,5 @@
 ﻿
 using System.Collections.Generic;
-using PayaG4.DataLayer.DTO.Accounting;
-
 namespace PayaG4.SDK.DTO.AccTransaction
 {
     public class TfCardDetailBasedOnTfCodeReportDTO

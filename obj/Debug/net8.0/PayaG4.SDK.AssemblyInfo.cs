@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute(".net standard library to communicate with Pouya services")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.9.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.9-alpha.0.1+2fb5cddd4f408f952f359f94177153ce61a4c5a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.9+0d8c8960098a3b5cd7edb92931c4870623982aec")]
 [assembly: System.Reflection.AssemblyProductAttribute("PayaG4.SDK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PayaG4.SDK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.0.0")]

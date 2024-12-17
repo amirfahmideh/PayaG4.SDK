@@ -5,7 +5,7 @@ using PersianUtilCore.Extension.Datetime;
 using System;
 using System.Collections.Generic;
 
-namespace PayaG4.DataLayer.DTO.Accounting
+namespace PayaG4.SDK.DTO.AccTransaction
 {
     public class TfCardDetailReportItemDTO
     {

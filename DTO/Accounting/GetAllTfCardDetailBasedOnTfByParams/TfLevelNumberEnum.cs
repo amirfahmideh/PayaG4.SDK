@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PayaG4.DataLayer.Enums.Common
+namespace PayaG4.SDK.DTO.AccTransaction
 {
     public enum TfLevelNumberEnum
     {
