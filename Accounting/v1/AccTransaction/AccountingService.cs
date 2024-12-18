@@ -11,7 +11,7 @@ public class AccountingService : BaseService
 {
     private HttpClient httpClient;
     private readonly string apiPrefix = "/api/v1/accTransaction/";
-    private readonly string apiReportPrefix = "/api/v1/accounting/report";
+    private readonly string apiReportPrefix = "/api/v1/accounting/report/";
 
     public AccountingService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
     {
