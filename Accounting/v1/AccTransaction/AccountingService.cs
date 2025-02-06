@@ -16,12 +16,12 @@ public class AccountingService : BaseService
     public AccountingService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
     {
         httpClient = new HttpClient();
+        httpClient.Timeout = Timeout.InfiniteTimeSpan;
     }
     public async Task<MethodResult<int>> AddAccTransactionAsync(AddAccTransactionBatchDTO parameter)
     {
         try
         {
-            httpClient = new HttpClient();
             await AddAuthorizationBearerAsync(httpClient);
             var clientUrl = GenerateApiCallUrl(apiPrefix, "addAccTransactionBatch");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
@@ -55,7 +55,6 @@ public class AccountingService : BaseService
     {
         try
         {
-            httpClient = new HttpClient();
             var clientUrl = GenerateApiCallUrl(apiReportPrefix, "getAllTfCardDetailBasedOnTfByParams");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)
