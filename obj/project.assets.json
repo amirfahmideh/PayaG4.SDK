@@ -14298,12 +14298,7 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "/Users/amir/.nuget/packages/": {}
-=======
-    "C:\\Users\\a.fahmideh.POUYA\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> 6894b4021d1f5344f5e84b100eaa426ff0229a36
   },
   "project": {
     "version": "1.0.0",
@@ -14314,27 +14309,13 @@
       "packagesPath": "/Users/amir/.nuget/packages/",
       "outputPath": "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< HEAD
         "/Users/amir/.nuget/NuGet/NuGet.Config"
-=======
-        "C:\\Users\\a.fahmideh.POUYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> 6894b4021d1f5344f5e84b100eaa426ff0229a36
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-<<<<<<< HEAD
-=======
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\_SDK\\Nuget": {},
->>>>>>> 6894b4021d1f5344f5e84b100eaa426ff0229a36
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -14344,9 +14325,6 @@
         }
       },
       "warningProperties": {
-        "noWarn": [
-          "NU5105"
-        ],
         "warnAsError": [
           "NU1605"
         ]
@@ -14397,23 +14375,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-<<<<<<< HEAD
             "version": "[8.0.11, 8.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[8.0.11, 8.0.11]"
-=======
-            "version": "[8.0.12, 8.0.12]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.12, 8.0.12]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.12, 8.0.12]"
->>>>>>> 6894b4021d1f5344f5e84b100eaa426ff0229a36
           }
         ],
         "frameworkReferences": {
@@ -14421,11 +14387,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
->>>>>>> 6894b4021d1f5344f5e84b100eaa426ff0229a36
       }
     }
   },
