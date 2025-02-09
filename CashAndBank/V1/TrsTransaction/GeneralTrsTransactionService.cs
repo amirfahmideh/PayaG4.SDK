@@ -13,12 +13,12 @@ public class GeneralTrsTransactionService : BaseService
     public GeneralTrsTransactionService(ServiceConfiguration _serviceConfiguration) : base(_serviceConfiguration)
     {
         httpClient = new HttpClient();
+        httpClient.Timeout = Timeout.InfiniteTimeSpan;
     }
     public async Task<MethodResult<ReceiptReceiveTransactionItemDTO>> GetReceiptReceiveItemByParamsAsync(ListReceiptReceiveTransactionItemByParamsDTO parameter)
     {
         try
         {
-            httpClient = new HttpClient();
             var clientUrl = GenerateApiCallUrl(apiPrefix, "getReceiptReceiveItemByParams");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)

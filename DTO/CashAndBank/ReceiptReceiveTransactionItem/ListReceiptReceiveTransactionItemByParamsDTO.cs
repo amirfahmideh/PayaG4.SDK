@@ -27,8 +27,14 @@ namespace PayaG4.SDK.DTO.CashAndBank
         [Required(ErrorMessage = "َشماره سند را وارد کنید")]
         public string DocNo { get; set; }
 
+        [Display(Name = "نوع سند")]
+        [Required(ErrorMessage = "نوع سند را وارد کنید")]
+        public int? BankDocumentCode { get; set; }
+
         [Display(Name = "سال مالی")]
         public int? FYearId { get; set; }
 
+        [Display(Name = "کنترل بخش انتهایی شماره سند")]
+        public int? CompareSuffixDocNoNumber { get; set; }
     }
 }
