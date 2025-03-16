@@ -27,7 +27,7 @@ namespace PayaG4.SDK.DTO.AccTransaction
 
         public long Id { get; set; }
         public int? CurrencyId { get; set; }
-        public int Type { get; set; }
+        // public int Type { get; set; }
 
         public TfCardDocumentTypeEnum DocumentType { get; set; }
 

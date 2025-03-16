@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj": {}
+    "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/PayaG4.SDK.csproj": {}
   },
   "projects": {
-    "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj": {
+    "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/PayaG4.SDK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj",
+        "projectUniqueName": "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/PayaG4.SDK.csproj",
         "projectName": "PayaG4.SDK",
-        "projectPath": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj",
-        "packagesPath": "C:\\Users\\a.fahmideh.POUYA\\.nuget\\packages\\",
-        "outputPath": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\obj\\",
+        "projectPath": "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/PayaG4.SDK.csproj",
+        "packagesPath": "/Users/amir/.nuget/packages/",
+        "outputPath": "/Users/amir/Documents/Projects/_myGitHub/PayaG4.SDK/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\a.fahmideh.POUYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/amir/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\_SDK\\Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
