@@ -1,8 +1,8 @@
 using System.Net;
 using System.Net.Http.Json;
 using PayaG4.SDK.Base;
-using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.DTO.CashAndBank;
+using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.Exceptions;
 
 namespace PayaG4.SDK.CashAndBank.V1.TrsTransaction;

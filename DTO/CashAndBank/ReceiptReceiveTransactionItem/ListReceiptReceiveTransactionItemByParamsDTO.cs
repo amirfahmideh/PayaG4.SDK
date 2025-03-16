@@ -25,7 +25,7 @@ namespace PayaG4.SDK.DTO.CashAndBank
 
         [Display(Name = "شماره سند")]
         [Required(ErrorMessage = "َشماره سند را وارد کنید")]
-        public string DocNo { get; set; }
+        public string[] DocNo { get; set; }
 
         [Display(Name = "نوع سند")]
         [Required(ErrorMessage = "نوع سند را وارد کنید")]
