@@ -42,5 +42,8 @@ namespace PayaG4.SDK.DTO.CashAndBank
         [Display(Name = "شرح ردیف")]
         public string Description { get; set; }
         public List<ReceiptReceiveTransactionItemDetailDTO> TransactionItemDetails { get; set; }
+
+        [Display(Name = "تاریخ وصول")]
+        public DateTime? ReceiptDate { get; set; }
     }
 }

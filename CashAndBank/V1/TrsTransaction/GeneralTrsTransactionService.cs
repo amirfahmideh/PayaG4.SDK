@@ -43,4 +43,33 @@ public class GeneralTrsTransactionService : BaseService
             return MethodResult<ReceiptReceiveTransactionItemDTO>.CloneSimpleErrorMethodResult("خطا", ex.Message);
         }
     }
+
+    public async Task<MethodResult<ReceiptReceiveTransactionItemDTO>> GetLatestReceiptReceiveItemByParamsAsync(ListLatestReceiptReceiveTransactionItemByParamsDTO parameter)
+    {
+        try
+        {
+            var clientUrl = GenerateApiCallUrl(apiPrefix, "getLatestReceiptReceiveItemByParams");
+            var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
+            if (response.IsSuccessStatusCode)
+            {
+                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<ReceiptReceiveTransactionItemDTO>>();
+                if (responseResult != null)
+                    return responseResult;
+                else { return MethodResult<ReceiptReceiveTransactionItemDTO>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
+            }
+            else if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                throw new BadRequestException();
+            }
+            else throw new Exception("UnHandle Exception");
+        }
+        catch (Exception ex)
+        {
+            return MethodResult<ReceiptReceiveTransactionItemDTO>.CloneSimpleErrorMethodResult("خطا", ex.Message);
+        }
+    }
 }
