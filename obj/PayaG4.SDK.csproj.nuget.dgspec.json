@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj",
         "projectName": "PayaG4.SDK",
         "projectPath": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\PayaG4.SDK.csproj",
-        "packagesPath": "C:\\Users\\a.fahmideh.POUYA\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a.fahmideh\\.nuget\\packages\\",
         "outputPath": "D:\\_Repositories\\_myGitHub\\PayaG4.SDK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\a.fahmideh.POUYA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a.fahmideh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\_SDK\\Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -88,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

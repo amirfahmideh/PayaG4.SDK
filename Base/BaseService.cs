@@ -2,6 +2,7 @@ using PayaG4.SDK.Exceptions;
 using PayaG4.SDK.Security.V1.Security;
 
 namespace PayaG4.SDK.Base;
+
 public class BaseService
 {
     private readonly ServiceConfiguration serviceConfiguration;
