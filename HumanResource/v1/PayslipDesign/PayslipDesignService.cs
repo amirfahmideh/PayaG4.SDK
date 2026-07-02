@@ -8,7 +8,7 @@ using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.DTO.HumanResource;
 using PayaG4.SDK.Exceptions;
 
-namespace PayaG4.SDK.Accounting.V1.AccTransaction;
+namespace PayaG4.SDK.HumanResource.V1.PayslipDesign;
 
 public class PayslipDesignService : BaseService
 {

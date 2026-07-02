@@ -8,7 +8,7 @@ using PayaG4.SDK.DTO.General.MethodResults;
 using PayaG4.SDK.DTO.HumanResource;
 using PayaG4.SDK.Exceptions;
 
-namespace PayaG4.SDK.Accounting.V1.AccTransaction;
+namespace PayaG4.SDK.HumanResource.V1.Personnel;
 
 public class PersonnelService : BaseService
 {
@@ -19,7 +19,7 @@ public class PersonnelService : BaseService
         httpClient = new HttpClient();
         httpClient.Timeout = Timeout.InfiniteTimeSpan;
     }
-    public async Task<MethodResult<GridData<PayslipDesignDTO>>> GetAllPersonnelList()
+    public async Task<MethodResult<GridData<PersonnelDTO>>> GetAllPersonnelList()
     {
         try
         {
@@ -29,10 +29,10 @@ public class PersonnelService : BaseService
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
             if (response.IsSuccessStatusCode)
             {
-                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<GridData<PayslipDesignDTO>>>();
+                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<GridData<PersonnelDTO>>>();
                 if (responseResult != null)
                     return responseResult;
-                else { return MethodResult<GridData<PayslipDesignDTO>>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
+                else { return MethodResult<GridData<PersonnelDTO>>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
             }
             else if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
@@ -49,7 +49,7 @@ public class PersonnelService : BaseService
         }
         catch (Exception ex)
         {
-            return MethodResult<GridData<PayslipDesignDTO>>.CloneSimpleErrorMethodResult("خطا", ex.Message);
+            return MethodResult<GridData<PersonnelDTO>>.CloneSimpleErrorMethodResult("خطا", ex.Message);
         }
     }
 }
