@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 namespace PayaG4.SDK.DTO.General;
+
 public class AgGridParameter
 {
     public int StartRow { get; set; }
@@ -10,4 +11,12 @@ public class AgGridParameter
     public string SearchTerm { get; set; }
 
     public List<FilterParameter> Filters { get; set; }
+
+    public static AgGridParameter AllRows => new AgGridParameter()
+    {
+        StartRow = 0,
+        EndRow = int.MaxValue,
+        PageSize = int.MaxValue,
+        SearchTerm = string.Empty,
+    };
 }
