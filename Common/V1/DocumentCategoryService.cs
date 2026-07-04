@@ -23,7 +23,7 @@ public class DocumentCategoryService : BaseService
     {
         try
         {
-            // await AddAuthorizationBearerAsync(httpClient);
+            await AddAuthorizationBearerAsync(httpClient);
             var clientUrl = GenerateApiCallUrl(apiPrefix, "getAllDocumentCategoryRoleListByUserId");
             var response = await httpClient.PostAsync(clientUrl, null);
             if (response.IsSuccessStatusCode)
