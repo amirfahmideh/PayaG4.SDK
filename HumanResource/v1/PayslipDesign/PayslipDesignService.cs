@@ -23,7 +23,7 @@ public class PayslipDesignService : BaseService
     {
         try
         {
-            // await AddAuthorizationBearerAsync(httpClient);
+            await AddAuthorizationBearerAsync(httpClient);
             var clientUrl = GenerateApiCallUrl(apiPrefix, "getAllValidListPayslipDesign");
             AgGridParameter parameter = AgGridParameter.AllRows;
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
