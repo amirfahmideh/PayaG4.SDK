@@ -86,4 +86,39 @@ public class PrintFileService : BaseService
             return MethodResult<PrintFileTemplateDTO>.CloneSimpleErrorMethodResult("خطا", ex.Message);
         }
     }
+
+    public async Task<MethodResult<PrintFileTemplateDTO>> GetPrintFile(long id)
+    {
+        try
+        {
+            await AddAuthorizationBearerAsync(httpClient);
+            var clientUrl = GenerateApiCallUrl(apiPrefix, "getPrintFile");
+            var response = await httpClient.PostAsJsonAsync(clientUrl, id);
+            if (response.IsSuccessStatusCode)
+            {
+                var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<PrintFileTemplateDTO>>();
+                if (responseResult != null)
+                    return responseResult;
+                else { return MethodResult<PrintFileTemplateDTO>.CloneSimpleErrorMethodResult("خطا", "خطا در دسترسی به وب سرویس"); }
+            }
+            else if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                throw new BadRequestException();
+            }
+            else
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
+        }
+        catch (Exception ex)
+        {
+            return MethodResult<PrintFileTemplateDTO>.CloneSimpleErrorMethodResult("خطا", ex.Message);
+        }
+    }
+
+
 }
