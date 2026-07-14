@@ -21,7 +21,8 @@ public class OwnerService : BaseService
         try
         {
             httpClient = new HttpClient();
-            var clientUrl = GenerateApiCallUrl(apiPrefix, "login");
+            await AddAuthorizationBearerAsync(httpClient);
+            var clientUrl = GenerateApiCallUrl(apiPrefix, "getOwnerLicenceInformation");
             var response = await httpClient.PostAsync(clientUrl, null);
             if (response.IsSuccessStatusCode)
             {
