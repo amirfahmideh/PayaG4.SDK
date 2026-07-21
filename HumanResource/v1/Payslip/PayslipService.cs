@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using PayaG4.SDK.Base;
 using PayaG4.SDK.DTO.General;
 using PayaG4.SDK.DTO.General.MethodResults;
@@ -25,6 +27,20 @@ public class PayslipService : BaseService
             await AddAuthorizationBearerAsync(httpClient);
             var clientUrl = GenerateApiCallUrl(apiPrefix, "getAllPayslipExportByParams");
             var response = await httpClient.PostAsJsonAsync(clientUrl, parameter);
+            Console.WriteLine(response.StatusCode);
+            Console.WriteLine(response.Content.Headers.ContentType);
+
+            var body = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(body);
+            Console.WriteLine(response.Content);
+
+            Console.WriteLine(parameter);
+            Console.WriteLine(JsonSerializer.Serialize(parameter));
+            Console.WriteLine("parameter.PersonnelBusinessEntityCodeFrom", parameter.PersonnelBusinessEntityCodeFrom);
+            Console.WriteLine("parameter.PersonnelBusinessEntityCodeTo", parameter.PersonnelBusinessEntityCodeTo);
+
+
+
             if (response.IsSuccessStatusCode)
             {
                 var responseResult = await response.Content.ReadFromJsonAsync<MethodResult<PayslipReportDTO>>();

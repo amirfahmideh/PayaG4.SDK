@@ -82,11 +82,11 @@ public class PayslipReportItemDTO
   [Display(Name = "کارگاه")]
 
   public string WorkOfficeName { get; set; }
-  public IEnumerable<DynamicPayslipItem> Benefits { get; set; } = new List<DynamicPayslipItem>();
+  public List<DynamicPayslipItem> Benefits { get; set; } = new List<DynamicPayslipItem>();
   public decimal? SumBenefit => this.Benefits.Where(p => p.IsCash).Sum(s => s.PriceNumber);
-  public IEnumerable<DynamicPayslipItem> Deficits { get; set; } = new List<DynamicPayslipItem>();
+  public List<DynamicPayslipItem> Deficits { get; set; } = new List<DynamicPayslipItem>();
   public decimal? SumDeficits => this.Deficits.Sum(s => s.PriceNumber);
-  public IEnumerable<DynamicPayslipDescriptionItem> Descriptions { get; set; } = new List<DynamicPayslipDescriptionItem>();
+  public List<DynamicPayslipDescriptionItem> Descriptions { get; set; } = new List<DynamicPayslipDescriptionItem>();
   public decimal? SumTotal => this.SumBenefit - this.SumDeficits;
 
 }
